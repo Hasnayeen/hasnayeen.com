@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/svg+xml" href="https://hasnayeen.com/favicon.svg">
+
+        <title>Hasnayeen.com</title>
+        <meta name="description" content="Nehal Hasnayeen — building small, silly experiments on the internet.">
+
+        <style>
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/build/assets/instrument-sans-400-normal-DRC__1Mx.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/build/assets/instrument-sans-400-normal-D1W7dsQl.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/build/assets/instrument-sans-500-normal-Dk9ku72i.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/build/assets/instrument-sans-500-normal-Z6ESRlEs.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/build/assets/instrument-sans-600-normal-B7fBEWYG.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/build/assets/instrument-sans-600-normal-B9e8oLYv.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Allura";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/build/assets/allura-400-normal-4sUZKTf1.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Allura";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/build/assets/allura-400-normal-DcxZAN6k.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+:root {
+  --font-instrument-sans: "Instrument Sans";
+  --font-allura: "Allura";
+}
+
+.font-instrument-sans {
+  font-family: var(--font-instrument-sans);
+}
+
+.font-allura {
+  font-family: var(--font-allura);
+}
+</style>
+        <link rel="preload" as="style" href="https://hasnayeen.com/build/assets/footprint-FqHCcwt3.css" /><link rel="stylesheet" href="https://hasnayeen.com/build/assets/footprint-FqHCcwt3.css" />
+                <link rel="modulepreload" as="script" href="https://hasnayeen.com/build/assets/blatui-CUFjfiOw.js" /><link rel="modulepreload" as="script" href="https://hasnayeen.com/build/assets/main-DGUbJjAq.js" /><link rel="modulepreload" as="script" href="https://hasnayeen.com/build/assets/three.module-BCkzDqst.js" /><script type="module" src="https://hasnayeen.com/build/assets/blatui-CUFjfiOw.js"></script><script type="module" src="https://hasnayeen.com/build/assets/main-DGUbJjAq.js"></script>        </head>
+    <body class="bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+        <aside id="sidebar" class="fixed inset-y-0 left-0 z-10 flex w-56 flex-col gap-2 border-r border-border bg-card p-2 text-xs text-card-foreground">
+        <div class="flex items-baseline gap-1.5 px-1.5 pt-1">
+            <div class="font-sans text-xs uppercase tracking-[.2em] opacity-70">House Builder</div>
+            <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden px-1.5 py-px text-[0.625rem] border-transparent [a&]:hover:bg-primary/90 bg-background text-foreground">v1.19</span>
+        </div>
+        <div class="flex items-center justify-between px-1.5">
+            <div class="text-[11px] opacity-70" data-save-status data-status="saved">Saved</div>
+        </div>
+        <div class="px-1.5">
+            <div class="text-xs opacity-70" data-restore-hint hidden></div>
+        </div>
+        <div
+    data-slot="separator"
+    role="none"
+        data-orientation="horizontal"
+    class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+></div>
+
+        <div
+    data-slot="tabs"
+    x-data="{ tab: 'build', orientation: 'horizontal' }"
+    x-id="['blat-tab', 'blat-tabpanel']"
+    :data-orientation="orientation"
+    class="gap-2 flex min-h-0 flex-1 flex-col"
+>
+    <div
+    data-slot="tabs-list"
+    data-variant="segmented"
+    role="tablist"
+    :aria-orientation="orientation"
+    :data-orientation="orientation"
+    @keydown="$blatNav($event, { orientation, selector: '[role=tab]', loop: true })"
+    class="group/tabs-list text-muted-foreground inline-flex items-center h-9 justify-center rounded-lg p-[3px] w-full bg-popover" aria-label="Sidebar panels"
+>
+    <button
+    type="button"
+    role="tab"
+    data-slot="tabs-trigger"
+    :id="$id('blat-tab', 'build')"
+    :aria-controls="$id('blat-tabpanel', 'build')"
+    :aria-selected="tab === 'build'"
+    :tabindex="tab === 'build' ? 0 : -1"
+    :data-state="tab === 'build' ? 'active' : 'inactive'"
+     @click="tab = 'build'" @focus="tab = 'build'"     class="text-foreground dark:text-muted-foreground inline-flex items-center justify-center gap-1.5 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 group-data-[variant=segmented]/tabs-list:h-[calc(100%-1px)] group-data-[variant=segmented]/tabs-list:flex-1 group-data-[variant=segmented]/tabs-list:rounded-md group-data-[variant=segmented]/tabs-list:border group-data-[variant=segmented]/tabs-list:border-transparent group-data-[variant=segmented]/tabs-list:px-2 group-data-[variant=segmented]/tabs-list:py-1 group-data-[variant=segmented]/tabs-list:data-[state=active]:bg-background group-data-[variant=segmented]/tabs-list:data-[state=active]:shadow-sm dark:group-data-[variant=segmented]/tabs-list:data-[state=active]:text-foreground dark:group-data-[variant=segmented]/tabs-list:data-[state=active]:border-input dark:group-data-[variant=segmented]/tabs-list:data-[state=active]:bg-input/30 group-data-[variant=underline]/tabs-list:-mb-px group-data-[variant=underline]/tabs-list:rounded-none group-data-[variant=underline]/tabs-list:border-0 group-data-[variant=underline]/tabs-list:border-b-2 group-data-[variant=underline]/tabs-list:border-transparent group-data-[variant=underline]/tabs-list:bg-transparent group-data-[variant=underline]/tabs-list:px-1 group-data-[variant=underline]/tabs-list:pb-2.5 group-data-[variant=underline]/tabs-list:shadow-none group-data-[variant=underline]/tabs-list:data-[state=active]:border-primary group-data-[variant=underline]/tabs-list:data-[state=active]:text-foreground group-data-[variant=pills]/tabs-list:rounded-full group-data-[variant=pills]/tabs-list:px-3 group-data-[variant=pills]/tabs-list:py-1 group-data-[variant=pills]/tabs-list:data-[state=active]:bg-primary group-data-[variant=pills]/tabs-list:data-[state=active]:text-primary-foreground"
+>
+    Build
+</button>
+                <button
+    type="button"
+    role="tab"
+    data-slot="tabs-trigger"
+    :id="$id('blat-tab', 'settings')"
+    :aria-controls="$id('blat-tabpanel', 'settings')"
+    :aria-selected="tab === 'settings'"
+    :tabindex="tab === 'settings' ? 0 : -1"
+    :data-state="tab === 'settings' ? 'active' : 'inactive'"
+     @click="tab = 'settings'" @focus="tab = 'settings'"     class="text-foreground dark:text-muted-foreground inline-flex items-center justify-center gap-1.5 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 group-data-[variant=segmented]/tabs-list:h-[calc(100%-1px)] group-data-[variant=segmented]/tabs-list:flex-1 group-data-[variant=segmented]/tabs-list:rounded-md group-data-[variant=segmented]/tabs-list:border group-data-[variant=segmented]/tabs-list:border-transparent group-data-[variant=segmented]/tabs-list:px-2 group-data-[variant=segmented]/tabs-list:py-1 group-data-[variant=segmented]/tabs-list:data-[state=active]:bg-background group-data-[variant=segmented]/tabs-list:data-[state=active]:shadow-sm dark:group-data-[variant=segmented]/tabs-list:data-[state=active]:text-foreground dark:group-data-[variant=segmented]/tabs-list:data-[state=active]:border-input dark:group-data-[variant=segmented]/tabs-list:data-[state=active]:bg-input/30 group-data-[variant=underline]/tabs-list:-mb-px group-data-[variant=underline]/tabs-list:rounded-none group-data-[variant=underline]/tabs-list:border-0 group-data-[variant=underline]/tabs-list:border-b-2 group-data-[variant=underline]/tabs-list:border-transparent group-data-[variant=underline]/tabs-list:bg-transparent group-data-[variant=underline]/tabs-list:px-1 group-data-[variant=underline]/tabs-list:pb-2.5 group-data-[variant=underline]/tabs-list:shadow-none group-data-[variant=underline]/tabs-list:data-[state=active]:border-primary group-data-[variant=underline]/tabs-list:data-[state=active]:text-foreground group-data-[variant=pills]/tabs-list:rounded-full group-data-[variant=pills]/tabs-list:px-3 group-data-[variant=pills]/tabs-list:py-1 group-data-[variant=pills]/tabs-list:data-[state=active]:bg-primary group-data-[variant=pills]/tabs-list:data-[state=active]:text-primary-foreground"
+>
+    Settings
+</button>
+</div>
+
+            <div
+    data-slot="tabs-content"
+    role="tabpanel"
+    tabindex="0"
+    :id="$id('blat-tabpanel', 'build')"
+    :aria-labelledby="$id('blat-tab', 'build')"
+    x-show="tab === 'build'"
+    x-cloak
+    class="outline-none flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto"
+>
+    <div data-levels class="space-y-1" aria-label="Levels">
+                <div
+    data-slot="separator"
+    role="none"
+        data-orientation="horizontal"
+    class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+></div>
+                <div class="px-1.5 font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Levels</div>
+                <div data-level-list class="flex flex-col gap-0.5"></div>
+                <template data-level-item-template>
+                    <div class="flex gap-0.5">
+                        <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 has-[>svg]:px-2.5 flex-1 justify-start px-2 text-xs data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-level-main="data-level-main"
+>
+        
+    </button>
+                        <button
+    data-slot="button"
+         type="button"         data-level-eye="data-level-eye" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-8"
+>
+        <svg data-eye-open="1" aria-hidden="true" class="text-foreground/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>
+  <circle cx="12" cy="12" r="3"/>
+</svg>                            <svg data-eye-closed="1" aria-hidden="true" class="hidden text-foreground/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m15 18-.722-3.25"/>
+  <path d="M2 8a10.645 10.645 0 0 0 20 0"/>
+  <path d="m20 15-1.726-2.05"/>
+  <path d="m4 15 1.726-2.05"/>
+  <path d="m9 18 .722-3.25"/>
+</svg>
+    </button>
+                    </div>
+                </template>
+            </div>
+            <div data-furniture-catalogue hidden class="space-y-2" aria-label="Furniture catalogue">
+                <div
+    data-slot="separator"
+    role="none"
+        data-orientation="horizontal"
+    class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+></div>
+                <div class="px-1.5 font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Furniture</div>
+                <p class="px-1.5 text-[11px] opacity-70">Pick a piece, then click inside a room to place it. R rotates the ghost.</p>
+                <div data-furniture-groups class="flex flex-col gap-2"></div>
+            </div>
+            <div data-light-catalogue hidden class="space-y-2" aria-label="Light catalogue">
+                <div
+    data-slot="separator"
+    role="none"
+        data-orientation="horizontal"
+    class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+></div>
+                <div class="px-1.5 font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Lights</div>
+                <p class="px-1.5 text-[11px] opacity-70">Pick a kind, then click inside a room. They glow at night.</p>
+                <div class="grid grid-cols-3 gap-1 px-1.5">
+                    <button
+    data-slot="button"
+         type="button"         data-light-kind="ceiling" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
+>
+        Ceiling
+    </button>
+                    <button
+    data-slot="button"
+         type="button"         data-light-kind="lamp" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
+>
+        Lamp
+    </button>
+                    <button
+    data-slot="button"
+         type="button"         data-light-kind="wall" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
+>
+        Wall
+    </button>
+                </div>
+                <div class="flex flex-col gap-1 px-1.5">
+                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 w-full" data-action="auto-light"
+>
+        Auto-light rooms
+    </button>
+                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 w-full" data-action="toggle-all-lights"
+>
+        All lights on
+    </button>
+                </div>
+            </div>
+</div>
+
+            <div
+    data-slot="tabs-content"
+    role="tabpanel"
+    tabindex="0"
+    :id="$id('blat-tabpanel', 'settings')"
+    :aria-labelledby="$id('blat-tab', 'settings')"
+    x-show="tab === 'settings'"
+    x-cloak
+    class="outline-none flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto"
+>
+    <div data-project-settings class="space-y-2" aria-label="Project settings">
+                <div class="px-1.5 font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Project</div>
+                <p class="px-1.5 text-[11px] opacity-70">Defaults for new walls &amp; slabs.</p>
+                <div class="grid grid-cols-3 gap-1 px-1.5">
+                    <div class="space-y-1">
+                        <label data-slot="label" for="proj-wall-height" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Wall ht
+</label>
+                        <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="proj-wall-height" step="0.5" data-project-field="wallHeight" aria-label="Default wall height in feet" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                    </div>
+                    <div class="space-y-1">
+                        <label data-slot="label" for="proj-wall-thick" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Wall th
+</label>
+                        <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="proj-wall-thick" step="0.01" data-project-field="wallThickness" aria-label="Default wall thickness in feet" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                    </div>
+                    <div class="space-y-1">
+                        <label data-slot="label" for="proj-slab" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Slab
+</label>
+                        <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="proj-slab" step="0.1" data-project-field="slabThickness" aria-label="Default slab thickness in feet" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                    </div>
+                </div>
+                <div class="space-y-1 px-1.5">
+                    <label data-slot="label" for="proj-north" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    North (° clockwise from plan up)
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="proj-north" step="5" min="0" max="359" data-project-field="northDeg" aria-label="Site north angle in degrees" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                </div>
+                <div class="px-1.5">
+                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 w-full" data-action="apply-settings-to-all" title="Push the defaults onto every existing wall"
+>
+        Apply to all walls
+    </button>
+                </div>
+            </div>
+</div>
+</div>
+
+        <div class="space-y-1.5">
+            <div
+    data-slot="separator"
+    role="none"
+        data-orientation="horizontal"
+    class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+></div>
+            <div class="flex flex-col gap-1 pt-1">
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 has-[>svg]:px-2.5 w-full justify-start px-2 text-xs" data-action="new-project"
+>
+    <svg aria-hidden="true" class="text-foreground/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 12h14"/>
+  <path d="M12 5v14"/>
+</svg>    New project
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 has-[>svg]:px-2.5 w-full justify-start px-2 text-xs" data-action="export-plan"
+>
+    <svg aria-hidden="true" class="text-foreground/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 15V3"/>
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+  <path d="m7 10 5 5 5-5"/>
+</svg>    Export floor plan
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 has-[>svg]:px-2.5 w-full justify-start px-2 text-xs" data-action="view-schedules"
+>
+    <svg aria-hidden="true" class="text-foreground/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3v18"/>
+  <rect width="18" height="18" x="3" y="3" rx="2"/>
+  <path d="M3 9h18"/>
+  <path d="M3 15h18"/>
+</svg>    Schedules
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 has-[>svg]:px-2.5 w-full justify-start px-2 text-xs" data-action="create-tour" title="Preview a cinematic flythrough, then record it as video"
+>
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/>
+  <rect x="2" y="6" width="14" height="12" rx="2"/>
+</svg>    Create tour
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="items-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-8 rounded-md gap-1.5 has-[>svg]:px-2.5 hidden w-full justify-start px-2 text-xs" data-action="export-handoff" title="One-click handoff PDF: cover, 3D views, sheets, schedules"
+>
+    <svg aria-hidden="true" class="text-foreground/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/>
+  <path d="M12 22V12"/>
+  <polyline points="3.29 7 12 12 20.71 7"/>
+  <path d="m7.5 4.27 9 5.15"/>
+</svg>    Export for builder
+    </button>
+            </div>
+        </div>
+    </aside>
+
+    <aside id="floor-properties" hidden class="fixed right-4 top-16 z-10 max-h-[calc(100vh-(var(--spacing)*20))] w-72 space-y-4 overflow-x-hidden overflow-y-auto rounded-lg border border-border bg-card p-4 text-card-foreground shadow-lg">
+        <section data-room-presets hidden class="space-y-3" aria-label="Draw a room">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Room</div>
+            <p class="text-[11px] opacity-70">Drag to size · click to place the picked preset.</p>
+            <div class="grid grid-cols-2 gap-1">
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-room-preset="Bedroom"
+>
+        Bedroom 12×12
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-room-preset="Living"
+>
+        Living 14×16
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-room-preset="Kitchen"
+>
+        Kitchen 10×12
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-room-preset="Bath"
+>
+        Bath 5×8
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-room-preset="Garage"
+>
+        Garage 20×20
+    </button>
+                            </div>
+        </section>
+
+        <section data-floor-editor class="space-y-4" aria-label="Floor">
+        <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Floor · <span data-floor-level></span></div>
+
+                    <div class="space-y-1.5">
+                <label data-slot="label" for="floor-width" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Width (ft)
+</label>
+                <input
+        type="number"
+        data-slot="input"
+        data-size="default"
+                id="floor-width" step="0.5" data-field="width" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 px-3 py-1 text-base md:text-sm file:h-7 file:text-sm"
+    />
+            </div>
+                    <div class="space-y-1.5">
+                <label data-slot="label" for="floor-length" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Length (ft)
+</label>
+                <input
+        type="number"
+        data-slot="input"
+        data-size="default"
+                id="floor-length" step="0.5" data-field="length" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 px-3 py-1 text-base md:text-sm file:h-7 file:text-sm"
+    />
+            </div>
+        
+        <div class="space-y-1.5" data-storey-height-group hidden>
+            <label data-slot="label" for="floor-storey-height" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Storey height (ft)
+</label>
+            <input
+        type="number"
+        data-slot="input"
+        data-size="default"
+                id="floor-storey-height" step="0.5" data-storey-height="data-storey-height" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 px-3 py-1 text-base md:text-sm file:h-7 file:text-sm"
+    />
+            <p class="text-[11px] opacity-70">Slab base to next slab base for this level.</p>
+        </div>
+
+        <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-floor" title="Delete floor (Del)"
+>
+        Delete floor
+    </button>
+        </section>
+
+        <section data-cuts-editor class="space-y-3 border-t border-border pt-3" aria-label="Cuts">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Cuts</div>
+
+            <div class="grid grid-cols-3 gap-1">
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight" data-add-cut="rect"
+>
+        Rectangle
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight" data-add-cut="triangle"
+>
+        Triangle
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight" data-add-cut="quarter"
+>
+        Quarter circle
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight" data-add-cut="quarterConvex"
+>
+        Convex quarter
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight" data-add-cut="half"
+>
+        Half circle
+    </button>
+                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-auto whitespace-normal py-1.5 text-center leading-tight" data-add-cut="circle"
+>
+        Full circle
+    </button>
+                            </div>
+
+            <div data-cut-list class="flex flex-col gap-1"></div>
+            <template data-cut-item-template>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 justify-start data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
+>
+        
+    </button>
+            </template>
+
+            <div data-cut-editor hidden class="space-y-3 rounded-md border border-border p-3">
+                <p data-cut-locked hidden class="rounded-md bg-muted p-2 text-[11px] opacity-80">Stair opening — managed by its stair. Move or delete the stair instead.</p>
+                <div class="grid grid-cols-2 gap-2">
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="cut-x" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    X offset (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="cut-x" step="1" data-cut-field="x" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="cut-z" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Z offset (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="cut-z" step="1" data-cut-field="z" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="cut-width" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Width (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="cut-width" step="1" data-cut-field="width" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="cut-length" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Length (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="cut-length" step="1" data-cut-field="length" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                    </div>
+
+                <div data-corner-group class="space-y-1.5">
+                    <label data-slot="label" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Right angle at
+</label>
+                    <div class="grid grid-cols-4 gap-1">
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-corner="nw"
+>
+        nw
+    </button>
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-corner="ne"
+>
+        ne
+    </button>
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-corner="sw"
+>
+        sw
+    </button>
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-corner="se"
+>
+        se
+    </button>
+                                            </div>
+                </div>
+
+                <div data-side-group class="space-y-1.5">
+                    <label data-slot="label" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Flat side on
+</label>
+                    <div class="grid grid-cols-4 gap-1">
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-side="n"
+>
+        n
+    </button>
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-side="e"
+>
+        e
+    </button>
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-side="s"
+>
+        s
+    </button>
+                                                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 uppercase data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-side="w"
+>
+        w
+    </button>
+                                            </div>
+                </div>
+
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-cut" title="Delete cut (Del)"
+>
+        Delete cut
+    </button>
+            </div>
+        </section>
+
+        <section data-rooms-editor hidden class="space-y-3 border-t border-border pt-3" aria-label="Rooms">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Rooms</div>
+
+            <p data-rooms-empty class="text-[11px] opacity-70">No enclosed rooms yet — add walls to split the floor.</p>
+            <div data-room-list class="flex flex-col gap-2"></div>
+            <template data-room-item-template>
+                <div class="space-y-2 rounded-md border border-border p-2">
+                    <div class="flex items-center gap-2">
+                        <input
+        type="text"
+        data-slot="input"
+        data-size="sm"
+                maxlength="60" data-room-name="data-room-name" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs min-w-0 flex-1" aria-label="Room name"
+    />
+                        <span data-room-area class="whitespace-nowrap text-[11px] tabular-nums opacity-70"></span>
+                    </div>
+                    <div class="grid grid-cols-2 items-end gap-2">
+                        <div class="space-y-1.5">
+                            <label data-slot="label" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Type
+</label>
+                            <select
+                        data-slot="select"
+        data-size="sm"
+                data-room-type="data-room-type" class="blat-select h-8 text-sm w-full" aria-label="Room type"
+    >
+                    
+            </select>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label data-slot="label" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Fill
+</label>
+                            <input
+        type="color"
+        data-slot="input"
+        data-size="sm"
+                data-room-finish="data-room-finish" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-sm file:h-6 file:text-xs h-8 w-full p-1" aria-label="Plan fill color"
+    />
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <p data-room-totals class="text-[11px] leading-relaxed opacity-70"></p>
+        </section>
+
+        <section data-wall-editor hidden class="space-y-3" aria-label="Wall">
+            <div data-wall-fields class="space-y-3">
+                <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Wall</div>
+
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="wall-length" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Length (ft)
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="default"
+                id="wall-length" step="1" data-wall-length="data-wall-length" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 px-3 py-1 text-base md:text-sm file:h-7 file:text-sm"
+    />
+                </div>
+
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="wall-material" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Material
+</label>
+                    <select
+                        data-slot="select"
+        data-size="default"
+                id="wall-material" data-wall-material="data-wall-material" class="blat-select h-9"
+    >
+                    
+            </select>
+                </div>
+
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="wall-color" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Color
+</label>
+                    <input
+        type="color"
+        data-slot="input"
+        data-size="default"
+                id="wall-color" data-wall-color="data-wall-color" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-base md:text-sm file:h-7 file:text-sm h-9 w-full p-1"
+    />
+                </div>
+
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-wall" title="Delete wall (Del)"
+>
+        Delete wall
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="split-wall" title="Split wall at its midpoint"
+>
+        Split wall
+    </button>
+
+                <details data-wall-advanced class="rounded-md border border-border p-2">
+                    <summary class="cursor-pointer text-[11px] uppercase tracking-[.15em] opacity-70">Advanced</summary>
+                    <div class="mt-2 grid grid-cols-2 gap-2">
+                        <div class="space-y-1.5">
+                            <label data-slot="label" for="wall-height" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Height (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="wall-height" step="0.5" data-wall-height="data-wall-height" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                        <div class="space-y-1.5">
+                            <label data-slot="label" for="wall-thickness" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Thickness (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="wall-thickness" step="0.01" data-wall-thickness="data-wall-thickness" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                    </div>
+                    <div class="mt-2 grid grid-cols-2 gap-1">
+                        <button
+    data-slot="button"
+         type="button"         data-wall-preset="exterior" title="0.5 ft thick" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5"
+>
+        Exterior
+    </button>
+                        <button
+    data-slot="button"
+         type="button"         data-wall-preset="interior" title="0.33 ft thick" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5"
+>
+        Interior
+    </button>
+                    </div>
+                </details>
+            </div>
+
+            <div data-opening-editor hidden class="space-y-3 rounded-md border border-border p-3">
+                <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70" data-opening-kind>Opening</div>
+
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="opening-type" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Type
+</label>
+                    <select
+                        data-slot="select"
+        data-size="sm"
+                id="opening-type" data-opening-type="data-opening-type" class="blat-select h-8 text-sm"
+    >
+                    
+            </select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2">
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="opening-offset" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Offset (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="opening-offset" step="1" data-opening-field="offset" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="opening-width" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Width (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="opening-width" step="1" data-opening-field="width" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="opening-height" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Height (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="opening-height" step="1" data-opening-field="height" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="opening-sill" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Sill (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="opening-sill" step="1" data-opening-field="sill" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                    </div>
+
+                <div data-door-swing class="grid grid-cols-2 gap-2">
+                    <div class="space-y-1.5">
+                        <label data-slot="label" for="opening-hinge" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Hinge
+</label>
+                        <select
+                        data-slot="select"
+        data-size="sm"
+                id="opening-hinge" data-opening-hinge="data-opening-hinge" class="blat-select h-8 text-sm"
+    >
+                    <option value="left">Left</option>
+                            <option value="right">Right</option>
+            </select>
+                    </div>
+                    <div class="space-y-1.5">
+                        <label data-slot="label" for="opening-swing" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Swing
+</label>
+                        <select
+                        data-slot="select"
+        data-size="sm"
+                id="opening-swing" data-opening-swing="data-opening-swing" class="blat-select h-8 text-sm"
+    >
+                    <option value="in">In</option>
+                            <option value="out">Out</option>
+            </select>
+                    </div>
+                </div>
+
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="opening-material" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Material
+</label>
+                    <select
+                        data-slot="select"
+        data-size="sm"
+                id="opening-material" data-opening-material="data-opening-material" class="blat-select h-8 text-sm"
+    >
+                    
+            </select>
+                </div>
+
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="opening-color" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Color
+</label>
+                    <input
+        type="color"
+        data-slot="input"
+        data-size="sm"
+                id="opening-color" data-opening-color="data-opening-color" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-sm file:h-6 file:text-xs h-8 w-full p-1"
+    />
+                </div>
+
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-opening" title="Delete opening (Del)"
+>
+        Delete opening
+    </button>
+            </div>
+        </section>
+
+        <section data-stair-editor hidden class="space-y-3" aria-label="Stair">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Stair</div>
+            <div class="space-y-1.5">
+                <label data-slot="label" for="stair-shape" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Shape
+</label>
+                <select
+                        data-slot="select"
+        data-size="sm"
+                id="stair-shape" data-stair-shape="data-stair-shape" class="blat-select h-8 text-sm"
+    >
+                    <option value="straight">Straight</option>
+                    <option value="L">L-shaped</option>
+                    <option value="U">U-shaped</option>
+            </select>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="stair-width" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Width (ft)
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="stair-width" step="0.5" data-stair-width="data-stair-width" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                </div>
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="stair-length" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Length (ft)
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="stair-length" step="1" data-stair-length="data-stair-length" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="stair-rotation" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Rotation (°)
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="stair-rotation" step="15" data-stair-rotation="data-stair-rotation" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                </div>
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="stair-level" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    From level
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="stair-level" step="1" min="0" data-stair-level="data-stair-level" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                </div>
+            </div>
+            <p data-stair-metrics class="text-[11px] leading-relaxed tabular-nums opacity-70"></p>
+            <p data-stair-warn hidden class="text-[11px] leading-relaxed text-amber-600"></p>
+            <p data-stair-hole hidden class="text-[11px] leading-relaxed text-amber-600"></p>
+            <p class="text-[11px] leading-relaxed opacity-50">Click places · drag moves · Shift-drag rotates.</p>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-stair" title="Delete stair (Del)"
+>
+        Delete stair
+    </button>
+        </section>
+
+        <section data-roof-editor hidden class="space-y-3" aria-label="Roof">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Roof</div>
+            <div data-roof-fields class="space-y-3">
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="roof-type" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Type
+</label>
+                    <select
+                        data-slot="select"
+        data-size="sm"
+                id="roof-type" data-roof-type="data-roof-type" class="blat-select h-8 text-sm"
+    >
+                    <option value="flat">Flat</option>
+                        <option value="gable">Gable</option>
+                        <option value="hip">Hip</option>
+                        <option value="shed">Shed</option>
+            </select>
+                </div>
+                <div class="space-y-1.5" data-roof-pitch-group>
+                    <label data-slot="label" for="roof-pitch" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Pitch (°)
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="roof-pitch" step="1" min="5" max="60" data-roof-pitch="data-roof-pitch" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                </div>
+                <div class="space-y-1.5">
+                    <label data-slot="label" for="roof-overhang" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Overhang (ft)
+</label>
+                    <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="roof-overhang" step="0.5" min="0" max="5" data-roof-overhang="data-roof-overhang" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                </div>
+                <div class="space-y-1.5" data-roof-ridge-group>
+                    <label data-slot="label" for="roof-ridge" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Ridge
+</label>
+                    <select
+                        data-slot="select"
+        data-size="sm"
+                id="roof-ridge" data-roof-ridge="data-roof-ridge" class="blat-select h-8 text-sm"
+    >
+                    <option value="x">Along width</option>
+                        <option value="z">Along length</option>
+            </select>
+                </div>
+                <label data-roof-follow-label class="flex items-center gap-2 text-[11px] opacity-80">
+                    <input type="checkbox" data-roof-follow class="accent-current" />
+                    Follow the cut outline
+                </label>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-roof" title="Delete roof (Del)"
+>
+        Delete roof
+    </button>
+            </div>
+        </section>
+
+        <section data-plot-editor hidden class="space-y-3" aria-label="Plot">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Plot</div>
+            <p data-plot-empty class="text-[11px] opacity-70">Drag a rectangle on the ground to draw the site plot. Redraw anytime with the Plot tool.</p>
+            <div data-plot-fields class="space-y-3">
+                <div class="grid grid-cols-2 gap-2">
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="plot-x" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    X (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="plot-x" step="1" data-plot-field="x" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="plot-z" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Z (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="plot-z" step="1" data-plot-field="z" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="plot-width" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Width (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="plot-width" step="1" data-plot-field="width" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                            <div class="space-y-1.5">
+                            <label data-slot="label" for="plot-length" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Length (ft)
+</label>
+                            <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="plot-length" step="1" data-plot-field="length" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                        </div>
+                                    </div>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="space-y-1.5">
+                        <label data-slot="label" for="plot-front" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Front (ft)
+</label>
+                        <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="plot-front" step="1" data-plot-setback="setbackFront" aria-label="Front setback in feet" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                    </div>
+                    <div class="space-y-1.5">
+                        <label data-slot="label" for="plot-side" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Side (ft)
+</label>
+                        <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="plot-side" step="1" data-plot-setback="setbackSide" aria-label="Side setback in feet" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                    </div>
+                    <div class="space-y-1.5">
+                        <label data-slot="label" for="plot-back" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Back (ft)
+</label>
+                        <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="plot-back" step="1" data-plot-setback="setbackBack" aria-label="Back setback in feet" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+                    </div>
+                </div>
+                <p class="text-[11px] opacity-70">Front faces north (−z).</p>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-plot" title="Delete plot (Del)"
+>
+        Delete plot
+    </button>
+            </div>
+        </section>
+
+        <section data-furniture-editor hidden class="space-y-3" aria-label="Furniture">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Furniture</div>
+            <p data-furniture-kind class="text-xs font-semibold"></p>
+            <div class="space-y-1.5">
+                <label data-slot="label" for="furniture-color" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Color
+</label>
+                <input
+        type="color"
+        data-slot="input"
+        data-size="sm"
+                id="furniture-color" data-furniture-color="data-furniture-color" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-sm file:h-6 file:text-xs h-8 w-full p-1" aria-label="Furniture color"
+    />
+            </div>
+            <p data-furniture-warn hidden class="text-[11px] leading-relaxed text-amber-600"></p>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="rotate-furniture" title="Rotate 45° (R)"
+>
+        Rotate 45°
+    </button>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-furniture" title="Delete furniture (Del)"
+>
+        Delete furniture
+    </button>
+        </section>
+
+        <section data-light-editor hidden class="space-y-3" aria-label="Light">
+            <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Light</div>
+            <div class="space-y-1.5">
+                <label data-slot="label" for="light-kind" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Kind
+</label>
+                <select id="light-kind" data-light-kind class="w-full rounded-md border border-border bg-background px-1 py-1 text-xs" aria-label="Light kind">
+                    <option value="ceiling">Ceiling</option>
+                    <option value="lamp">Floor lamp</option>
+                    <option value="wall">Wall light</option>
+                </select>
+            </div>
+            <div class="space-y-1.5">
+                <label data-slot="label" for="light-color" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Color
+</label>
+                <input
+        type="color"
+        data-slot="input"
+        data-size="sm"
+                id="light-color" data-light-color="data-light-color" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-sm file:h-6 file:text-xs h-8 w-full p-1" aria-label="Light color"
+    />
+                <div class="flex gap-1">
+                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 flex-1" data-light-preset="#ffd9a0" title="Warm white"
+>
+        Warm
+    </button>
+                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 flex-1" data-light-preset="#fff3d6" title="Cool white"
+>
+        Cool
+    </button>
+                    <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 flex-1" data-light-preset="#ffbe78" title="Amber"
+>
+        Amber
+    </button>
+                </div>
+            </div>
+            <div class="space-y-1.5">
+                <label data-slot="label" for="light-intensity" class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
+    Intensity
+</label>
+                <input
+        type="number"
+        data-slot="input"
+        data-size="sm"
+                id="light-intensity" step="0.1" min="0" max="10" data-light-intensity="data-light-intensity" aria-label="Light intensity" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:border-0 file:bg-transparent file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 px-2.5 py-1 text-sm file:h-6 file:text-xs"
+    />
+            </div>
+            <label class="flex items-center gap-2 text-xs"><input type="checkbox" data-light-on class="accent-current" /> Light on</label>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 w-full" data-action="delete-light" title="Delete light (Del)"
+>
+        Delete light
+    </button>
+        </section>
+    </aside>
+
+    <div data-plan-modal hidden class="fixed inset-0 z-50 items-center justify-center bg-black/50 p-4">
+        <div class="flex max-h-full w-full max-w-3xl flex-col gap-3 rounded-lg border border-border bg-card p-4 text-card-foreground shadow-lg" role="dialog" aria-modal="true" aria-label="Floor plan export">
+            <div class="flex items-center justify-between">
+                <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Plan sheets</div>
+                <button
+    data-slot="button"
+         type="button"         data-plan-close="data-plan-close" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5"
+>
+        Close
+    </button>
+            </div>
+            <div data-plan-tabs class="flex flex-wrap gap-1"></div>
+            <template data-plan-tab-template>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
+>
+        
+    </button>
+            </template>
+            <div data-plan-preview class="max-h-[60vh] overflow-auto rounded-md border border-border bg-white p-2 text-black"></div>
+            <p data-plan-legend class="text-[11px] tabular-nums opacity-70"></p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 text-xs">
+                    <label class="flex items-center gap-1 opacity-70">Paper
+                        <select data-plan-paper class="rounded-md border border-border bg-background px-1 py-1 text-xs" aria-label="Paper size">
+                            <option value="A4" selected>A4</option>
+                            <option value="A3">A3</option>
+                            <option value="Letter">Letter</option>
+                        </select>
+                    </label>
+                    <label class="flex items-center gap-1 opacity-70">Scale
+                        <select data-plan-scale class="rounded-md border border-border bg-background px-1 py-1 text-xs" aria-label="Drawing scale">
+                            <option value="Fit to page" selected>Fit</option>
+                            <option value="1:50">1:50</option>
+                            <option value="1:100">1:100</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="flex gap-1">
+                    <button
+    data-slot="button"
+         type="button"         data-plan-download-png="data-plan-download-png" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5"
+>
+        Sheet PNG
+    </button>
+                    <button
+    data-slot="button"
+         type="button"         data-plan-download="data-plan-download" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5"
+>
+        Sheet SVG
+    </button>
+                    <button
+    data-slot="button"
+         type="button"         data-plan-download-pdf="data-plan-download-pdf" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5"
+>
+        Download PDF
+    </button>
+                </div>
+            </div>
+            <div class="text-xs opacity-70">SVG + PNG 2x per sheet · multi-page PDF · black &amp; white · dimensions in feet</div>
+        </div>
+    </div>
+
+    <div data-schedules-modal hidden class="fixed inset-0 z-50 items-center justify-center bg-black/50 p-4">
+        <div class="flex max-h-full w-full max-w-3xl flex-col gap-3 overflow-y-auto rounded-lg border border-border bg-card p-4 text-card-foreground shadow-lg" role="dialog" aria-modal="true" aria-label="Schedules">
+            <div class="flex items-center justify-between">
+                <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">Schedules</div>
+                <button
+    data-slot="button"
+         type="button"         data-schedules-close="data-schedules-close" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5"
+>
+        Close
+    </button>
+            </div>
+            <div data-schedules-body class="flex flex-col gap-4"></div>
+            <div class="text-xs opacity-70">Doors &amp; windows grouped by type + size · walls net of openings · roofs true slope area · rooms inside wall faces · dimensions in feet</div>
+        </div>
+    </div>
+
+    <div data-new-project-modal hidden class="fixed inset-0 z-50 items-center justify-center bg-black/50 p-4">
+        <div class="flex max-h-full w-full max-w-2xl flex-col gap-3 overflow-y-auto rounded-lg border border-border bg-card p-4 text-card-foreground shadow-lg" role="dialog" aria-modal="true" aria-label="Start a new project">
+            <div class="flex items-center justify-between">
+                <div class="font-sans text-[11px] uppercase tracking-[.2em] opacity-70">New project</div>
+                <button
+    data-slot="button"
+         type="button"         data-new-project-close="data-new-project-close" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5"
+>
+        Close
+    </button>
+            </div>
+            <p class="text-xs opacity-70">Pick a starting point. Choosing one replaces the current project (you will be asked first).</p>
+            <div data-template-cards class="grid grid-cols-1 gap-2 sm:grid-cols-2"></div>
+            <template data-template-card-template>
+                <button type="button" data-template-choose class="flex flex-col gap-1 rounded-md border border-border p-2 text-left transition-colors hover:bg-accent/10">
+                    <span data-template-thumb class="block overflow-hidden rounded bg-white"></span>
+                    <span data-template-title class="text-xs font-semibold"></span>
+                    <span data-template-blurb class="text-[11px] leading-snug opacity-70"></span>
+                    <span data-template-facts class="text-[11px] tabular-nums opacity-70"></span>
+                </button>
+            </template>
+        </div>
+    </div>
+
+    <div class="pointer-events-none fixed left-56 right-0 top-3 z-10 flex justify-center">
+        <div id="toolbar" class="pointer-events-auto flex items-center gap-0.5 rounded-md border border-accent bg-background px-1 py-0.5  text-stone-500 shadow-md" role="toolbar" aria-label="Tools and operations">
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="select" title="Select tool (S)" aria-label="Select tool, shortcut S"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">S</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="move" title="Move tool (M)" aria-label="Move tool, shortcut M"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/>
+  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/>
+  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/>
+  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">M</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="floor" title="Floor tool (F)" aria-label="Floor tool, shortcut F"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M13 13.74a2 2 0 0 1-2 0L2.5 8.87a1 1 0 0 1 0-1.74L11 2.26a2 2 0 0 1 2 0l8.5 4.87a1 1 0 0 1 0 1.74z"/>
+  <path d="m20 14.285 1.5.845a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0l-8.5-4.87a1 1 0 0 1 0-1.74l1.5-.845"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">F</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="wall" title="Wall tool (W)" aria-label="Wall tool, shortcut W"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="18" height="18" x="3" y="3" rx="2"/>
+  <path d="M12 9v6"/>
+  <path d="M16 15v6"/>
+  <path d="M16 3v6"/>
+  <path d="M3 15h18"/>
+  <path d="M3 9h18"/>
+  <path d="M8 15v6"/>
+  <path d="M8 3v6"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">W</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="door" title="Door tool (D)" aria-label="Door tool, shortcut D"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/>
+  <path d="M2 21h20"/>
+  <path d="M9 12h.01"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">D</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="window" title="Window tool (G)" aria-label="Window tool, shortcut G"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3v18"/>
+  <path d="M3 12h18"/>
+  <rect x="3" y="3" width="18" height="18" rx="2"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">G</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="roof" title="Roof tool (E)" aria-label="Roof tool, shortcut E"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20q-.825 0-1.412-.587T9 18v-2q0-.825.588-1.412T11 14h2q.825 0 1.413.588T15 16v2q0 .825-.587 1.413T13 20zm-8-7.6q-.35.25-.75.2t-.65-.4t-.187-.75t.387-.65l8.975-6.875q.275-.2.588-.3t.637-.1t.638.1t.587.3L16 6.05V5.5q0-.625.438-1.062T17.5 4t1.063.438T19 5.5v2.85l3.225 2.45q.325.25.375.65t-.2.75t-.65.4t-.75-.2l-9-6.875z"></path></svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">E</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="room" title="Room tool (O)" aria-label="Room tool, shortcut O"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="18" height="18" x="3" y="3" rx="2"/>
+  <path d="M3 9h18"/>
+  <path d="M9 21V9"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">O</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="stair" title="Stair tool — click places, drag moves, Shift-drag rotates" aria-label="Stair tool"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v-3a1 1 0 011-1h6"/>
+  <path d="M19 17h-9a1 1 0 00-1 1v3"/>
+  <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/>
+  <path d="M19 9h-3a1 1 0 00-1 1v3"/>
+  <path d="M22 21H2"/>
+</svg>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="furniture" title="Furniture tool (N)" aria-label="Furniture tool, shortcut N"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/>
+  <path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
+  <path d="M4 18v2"/>
+  <path d="M20 18v2"/>
+  <path d="M12 4v9"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">N</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="light" title="Light tool (L)" aria-label="Light tool, shortcut L"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 12v6"/>
+  <path d="M4.077 10.615A1 1 0 0 0 5 12h14a1 1 0 0 0 .923-1.385l-3.077-7.384A2 2 0 0 0 15 2H9a2 2 0 0 0-1.846 1.23Z"/>
+  <path d="M8 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">L</kbd>
+    </button>
+                            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 rounded-md text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 gap-1 px-1.5 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-tool="plot" title="Plot tool (P)" aria-label="Plot tool, shortcut P"
+>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m12 8 6-3-6-3v10"/>
+  <path d="m8 11.99-5.5 3.14a1 1 0 0 0 0 1.74l8.5 4.86a2 2 0 0 0 2 0l8.5-4.86a1 1 0 0 0 0-1.74L16 12"/>
+  <path d="m6.49 12.85 11.02 6.3"/>
+  <path d="M17.51 12.85 6.5 19.15"/>
+</svg>                                            <kbd class="text-sm font-normal" aria-hidden="true">P</kbd>
+    </button>
+                        <div class="mx-0.5 h-4 w-px bg-stone-300/70" aria-hidden="true"></div>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 [&_svg:not([class*=size-])]:size-3.5 size-6 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-action="toggle-snap" title="Toggle placement snapping (hold Alt to suspend)" aria-label="Toggle placement snapping (hold Alt to suspend)"
+>
+        <svg aria-hidden="true" class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m12 15 4 4"/>
+  <path d="M2.352 10.648a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l6.029-6.029a1 1 0 1 1 3 3l-6.029 6.029a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l6.365-6.367A1 1 0 0 0 8.716 4.282z"/>
+  <path d="m5 8 4 4"/>
+</svg>                <span data-snap-label class="sr-only">Snap on</span>
+    </button>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 [&_svg:not([class*=size-])]:size-3.5 size-6 text-stone-500 hover:text-stone-800 data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-action="toggle-grid" title="Toggle grid visibility" aria-label="Toggle grid visibility"
+>
+        <svg aria-hidden="true" class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="18" height="18" x="3" y="3" rx="2"/>
+  <path d="M3 9h18"/>
+  <path d="M3 15h18"/>
+  <path d="M9 3v18"/>
+  <path d="M15 3v18"/>
+</svg>                <span data-grid-label class="sr-only">Grid off</span>
+    </button>
+            <div class="mx-0.5 h-4 w-px bg-stone-300/70" aria-hidden="true"></div>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 [&_svg:not([class*=size-])]:size-3.5 size-6 text-stone-500 hover:text-stone-800" data-action="undo" aria-label="Undo (Ctrl+Z)" title="Undo (Ctrl+Z)"
+>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+    </button>
+            <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 [&_svg:not([class*=size-])]:size-3.5 size-6 text-stone-500 hover:text-stone-800" data-action="redo" aria-label="Redo (Ctrl+Shift+Z)" title="Redo (Ctrl+Shift+Z)"
+>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14l5-5-5-5"/><path d="M20 9H10a6 6 0 0 0 0 12h3"/></svg>
+    </button>
+            <div class="mx-0.5 h-4 w-px bg-stone-300/70" aria-hidden="true"></div>
+            <div data-daynight class="flex items-center gap-1" aria-label="Day and night">
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 gap-1 rounded-md has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 px-1.5 text-[11px] data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-time-preset="day" title="Day (12:00)" aria-label="Day view"
+>
+        Day
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 gap-1 rounded-md has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 px-1.5 text-[11px] data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-time-preset="golden" title="Golden hour (17:30)" aria-label="Golden hour view"
+>
+        Golden
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 gap-1 rounded-md has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5 h-6 px-1.5 text-[11px] data-[active=true]:bg-accent data-[active=true]:text-accent-foreground" data-time-preset="night" title="Night (22:00)" aria-label="Night view"
+>
+        Night
+    </button>
+                <label class="flex items-center gap-1 text-[11px] tabular-nums">
+                    <input type="range" min="0" max="24" step="0.5" value="12" data-time-slider class="w-20 accent-current" aria-label="Time of day in hours" />
+                    <span data-time-label class="min-w-9 text-right">12:00</span>
+                </label>
+            </div>
+            <div class="mx-0.5 h-4 w-px bg-stone-300/70" aria-hidden="true"></div>
+            <div data-zoom class="flex items-center gap-0" aria-label="Zoom">
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 [&_svg:not([class*=size-])]:size-3.5 size-6 text-stone-500 hover:text-stone-800" data-zoom-out="data-zoom-out" aria-label="Zoom out" title="Zoom out"
+>
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="11" cy="11" r="8"/>
+  <line x1="21" x2="16.65" y1="21" y2="16.65"/>
+  <line x1="8" x2="14" y1="11" y2="11"/>
+</svg>
+    </button>
+                <button type="button" data-zoom-label class="min-w-11 cursor-pointer rounded px-0.5 text-center text-[11px] font-medium tabular-nums text-stone-500 hover:text-stone-800" title="Reset zoom to 100%">100%</button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 [&_svg:not([class*=size-])]:size-3.5 size-6 text-stone-500 hover:text-stone-800" data-zoom-in="data-zoom-in" aria-label="Zoom in" title="Zoom in"
+>
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="11" cy="11" r="8"/>
+  <line x1="21" x2="16.65" y1="21" y2="16.65"/>
+  <line x1="11" x2="11" y1="8" y2="14"/>
+  <line x1="8" x2="14" y1="11" y2="11"/>
+</svg>
+    </button>
+                <button
+    data-slot="button"
+         type="button"         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 [&_svg:not([class*=size-])]:size-3.5 size-6 text-stone-500 hover:text-stone-800" data-zoom-full="data-zoom-full" aria-label="Toggle fullscreen" title="Toggle fullscreen"
+>
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 3H5a2 2 0 0 0-2 2v3"/>
+  <path d="M21 8V5a2 2 0 0 0-2-2h-3"/>
+  <path d="M3 16v3a2 2 0 0 0 2 2h3"/>
+  <path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
+</svg>
+    </button>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="scene" class="fixed inset-y-0 left-56 right-0 block h-full w-[calc(100%-14rem)]" role="application" aria-label="3D house view. F floor, W wall, D door, G window, E roof, O room, P plot, N furniture, S select, M move, T toggles day and night, R rotates the furniture ghost 45 degrees, the selected furniture, floor or walls, Delete removes the selection, Escape cancels, Control Z undoes, Control C copies, Control V pastes. Shift-click or Shift-drag selects more. Hold Alt to suspend snapping. Move tool pans with left-drag."></canvas>
+
+    <div data-tour-bar hidden class="fixed bottom-4 left-1/2 z-20 flex max-w-[calc(100vw-16rem)] -translate-x-1/2 flex-wrap items-center justify-center gap-2 rounded-lg border border-border bg-card px-3 py-2 text-xs text-card-foreground shadow-lg" role="toolbar" aria-label="House tour">
+        <button
+    data-slot="button"
+         type="button"         data-tour-play="data-tour-play" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5"
+>
+        Play
+    </button>
+        <input type="range" min="0" max="60" step="0.1" value="0" data-tour-scrub class="w-40 accent-current" aria-label="Tour position" />
+        <span data-tour-time class="min-w-24 text-center tabular-nums opacity-70">0:00 / 0:00</span>
+        <label class="flex items-center gap-1 opacity-70">Length
+            <select data-tour-duration class="rounded-md border border-border bg-background px-1 py-1 text-xs" aria-label="Tour length">
+                <option value="short">Short 30s</option>
+                <option value="medium" selected>Medium 60s</option>
+                <option value="long">Long 90s</option>
+            </select>
+        </label>
+        <label class="flex items-center gap-1 opacity-70">Light
+            <select data-tour-daymode class="rounded-md border border-border bg-background px-1 py-1 text-xs" aria-label="Tour lighting">
+                <option value="day">Day</option>
+                <option value="night">Night</option>
+                <option value="day-night" selected>Day to night</option>
+            </select>
+        </label>
+        <label class="flex items-center gap-1 opacity-70"><input type="checkbox" data-tour-exteriors checked class="accent-current" /> Exteriors</label>
+        <button
+    data-slot="button"
+         type="button"         data-tour-record="data-tour-record" title="Record a 1080p tour video (MP4, WebM fallback)" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5"
+>
+        Record
+    </button>
+        <button
+    data-slot="button"
+         type="button"         data-tour-exit="data-tour-exit" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5"
+>
+        Exit
+    </button>
+        <div data-tour-progress hidden class="h-1.5 w-32 overflow-hidden rounded bg-muted" role="progressbar" aria-label="Recording progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div data-tour-progress-fill class="h-full w-0 bg-accent" style="width: 0%"></div>
+        </div>
+        <button
+    data-slot="button"
+         type="button"         data-tour-cancel="data-tour-cancel" hidden="hidden" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-7 gap-1 rounded-md px-2.5 text-xs has-[>svg]:px-2 [&_svg:not([class*=size-])]:size-3.5"
+>
+        Cancel
+    </button>
+        <p data-tour-note hidden class="w-full text-center text-[11px] opacity-70"></p>
+    </div>
+    </body>
+</html>
